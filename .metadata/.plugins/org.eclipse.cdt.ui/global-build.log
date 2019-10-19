@@ -1,0 +1,532 @@
+15:33:14 **** Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../main.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.cpp"
+../main.cpp(17): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../main.cpp(35): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../main.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./main.o   
+Finished building target: lab1
+ 
+15:33:29 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+15:57:44 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../main.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.cpp"
+../main.cpp(17): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../main.cpp(19): error: class "cilk::cilk_lib_1_1::op_max_index_view<long, int, std::less<int>>" has no member "calc_min"
+  		minimum->calc_min(i, mass_pointer[i]);
+  		         ^
+
+../main.cpp(46): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+compilation aborted for ../main.cpp (code 2)
+make: *** [subdir.mk:20: main.o] Ошибка 2
+"make all" terminated with exit code 2. Build might be incomplete.
+16:00:17 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../main.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.cpp"
+../main.cpp(17): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../main.cpp(46): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../main.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./main.o   
+Finished building target: lab1
+ 
+16:00:22 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:12:08 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:15:57 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:21:47 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:22:59 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:23:25 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:23:39 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:24:32 **** Clean-only build of configuration Debug for project lab1 ****
+make clean 
+rm -rf  ./lab1.o  ./lab1.d  lab1
+ 
+23:24:35 **** Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:25:47 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:28:26 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:28:36 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:34:31 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:36:53 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:38:04 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:39:17 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:39:28 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:39:42 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:40:28 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:42:38 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:44:48 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+23:45:08 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+21:06:41 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+21:10:14 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+../lab1.cpp(66): error: this range-based "for" statement requires a suitable "begin" function and none was found
+  	for (int e : vtest)
+  	             ^
+
+../lab1.cpp(66): error: this range-based "for" statement requires a suitable "end" function and none was found
+  	for (int e : vtest)
+  	             ^
+
+../lab1.cpp(67): error: expression must have class type
+  		vtest.push_back(rand() % 20000 + 1));
+  		^
+
+../lab1.cpp(67): error: expected a ";"
+  		vtest.push_back(rand() % 20000 + 1));
+  		                                   ^
+
+../lab1.cpp(72): error: this range-based "for" statement requires a suitable "begin" function and none was found
+  	cilk_for (int e : ctest)
+  	                  ^
+
+../lab1.cpp(72): error: this range-based "for" statement requires a suitable "end" function and none was found
+  	cilk_for (int e : ctest)
+  	                  ^
+
+../lab1.cpp(72): error: a _Cilk_for statement is not currently allowed as a range-based "for" statement
+  	cilk_for (int e : ctest)
+  	^
+
+../lab1.cpp(73): error: expression must have class type
+  		ctest.push_back(rand() % 20000 + 1));
+  		^
+
+../lab1.cpp(73): error: expected a ";"
+  		ctest.push_back(rand() % 20000 + 1));
+  		                                   ^
+
+compilation aborted for ../lab1.cpp (code 2)
+make: *** [subdir.mk:20: lab1.o] Ошибка 2
+"make all" terminated with exit code 2. Build might be incomplete.
+21:10:57 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+../lab1.cpp(66): error: this range-based "for" statement requires a suitable "begin" function and none was found
+  	for (int &e : vtest)
+  	              ^
+
+../lab1.cpp(66): error: this range-based "for" statement requires a suitable "end" function and none was found
+  	for (int &e : vtest)
+  	              ^
+
+../lab1.cpp(67): error: expression must have class type
+  		vtest.push_back(rand() % 20000 + 1));
+  		^
+
+../lab1.cpp(67): error: expected a ";"
+  		vtest.push_back(rand() % 20000 + 1));
+  		                                   ^
+
+../lab1.cpp(72): error: this range-based "for" statement requires a suitable "begin" function and none was found
+  	cilk_for (int &e : ctest)
+  	                   ^
+
+../lab1.cpp(72): error: this range-based "for" statement requires a suitable "end" function and none was found
+  	cilk_for (int &e : ctest)
+  	                   ^
+
+../lab1.cpp(72): error: a _Cilk_for statement is not currently allowed as a range-based "for" statement
+  	cilk_for (int &e : ctest)
+  	^
+
+../lab1.cpp(73): error: expression must have class type
+  		ctest.push_back(rand() % 20000 + 1));
+  		^
+
+../lab1.cpp(73): error: expected a ";"
+  		ctest.push_back(rand() % 20000 + 1));
+  		                                   ^
+
+compilation aborted for ../lab1.cpp (code 2)
+make: *** [subdir.mk:20: lab1.o] Ошибка 2
+"make all" terminated with exit code 2. Build might be incomplete.
+21:11:18 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+../lab1.cpp(66): error: this range-based "for" statement requires a suitable "begin" function and none was found
+  	for (int &e : vtest)
+  	              ^
+
+../lab1.cpp(66): error: this range-based "for" statement requires a suitable "end" function and none was found
+  	for (int &e : vtest)
+  	              ^
+
+../lab1.cpp(67): error: expression must have class type
+  		vtest.push_back(rand() % 20000 + 1);
+  		^
+
+../lab1.cpp(72): error: this range-based "for" statement requires a suitable "begin" function and none was found
+  	cilk_for (int &e : ctest)
+  	                   ^
+
+../lab1.cpp(72): error: this range-based "for" statement requires a suitable "end" function and none was found
+  	cilk_for (int &e : ctest)
+  	                   ^
+
+../lab1.cpp(72): error: a _Cilk_for statement is not currently allowed as a range-based "for" statement
+  	cilk_for (int &e : ctest)
+  	^
+
+../lab1.cpp(73): error: expression must have class type
+  		ctest.push_back(rand() % 20000 + 1);
+  		^
+
+compilation aborted for ../lab1.cpp (code 2)
+make: *** [subdir.mk:20: lab1.o] Ошибка 2
+"make all" terminated with exit code 2. Build might be incomplete.
+21:12:25 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+../lab1.cpp(67): error: expression must have class type
+  		vtest.push_back(rand() % 20000 + 1);
+  		^
+
+../lab1.cpp(73): error: expression must have class type
+  		ctest.push_back(rand() % 20000 + 1);
+  		^
+
+compilation aborted for ../lab1.cpp (code 2)
+make: *** [subdir.mk:20: lab1.o] Ошибка 2
+"make all" terminated with exit code 2. Build might be incomplete.
+21:15:19 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+../lab1.cpp(73): error: class "cilk::reducer<cilk::op_vector<int, std::allocator<int>>>" has no member "push_back"
+  		ctest.push_back(rand() % 20000 + 1);
+  		      ^
+
+compilation aborted for ../lab1.cpp (code 2)
+make: *** [subdir.mk:20: lab1.o] Ошибка 2
+"make all" terminated with exit code 2. Build might be incomplete.
+21:15:56 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
