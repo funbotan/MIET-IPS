@@ -1,23 +1,6 @@
-21:15:56 **** Incremental Build of configuration Debug for project lab1 ****
+15:29:43 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
+make: Цель «all» не требует выполнения команд.
 
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-
-21:15:56 Build Finished. 0 errors, 2 warnings. (took 814ms)
+15:29:43 Build Finished. 0 errors, 0 warnings. (took 264ms)
 

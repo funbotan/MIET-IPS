@@ -1,126 +1,1531 @@
-15:33:14 **** Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../main.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.cpp"
-../main.cpp(17): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../main.cpp(35): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../main.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./main.o   
-Finished building target: lab1
- 
-15:33:29 **** Incremental Build of configuration Debug for project lab1 ****
+00:30:11 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
 make: Цель «all» не требует выполнения команд.
-15:57:44 **** Incremental Build of configuration Debug for project lab1 ****
+00:30:15 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
-Building file: ../main.cpp
+make: Цель «all» не требует выполнения команд.
+00:30:43 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+00:31:17 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+00:51:40 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
 Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.cpp"
-../main.cpp(17): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
+icpc -g -O0 -qnextgen-diag -parallel -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+icpx: command line warning #10148: option '-parallel' not supported
+The LLVM based Intel Compiler maintains the expectation to be compatible with
+the current Intel Compiler product. There are options and capabilities that
+we are planning to support in the future but are not currently available.
+There are also options we do not plan to support.
 
-../main.cpp(19): error: class "cilk::cilk_lib_1_1::op_max_index_view<long, int, std::less<int>>" has no member "calc_min"
-  		minimum->calc_min(i, mass_pointer[i]);
-  		         ^
+options to be supported: 
+	-K=Pentium
+	-K=i386
+	-K=i486
+	-K=pentium
+	-K=rtti
+	-Wbrief
+	-Wchar-subscripts
+	-Wp64
+	-Wpch-messages
+	-Wremarks
+	-alias-const
+	-auto-ilp32
+	-auto-p32
+	-ax=<string>
+	-check-pointers-dangling
+	-check-pointers-mpx
+	-check-pointers-narrowing
+	-check-pointers-undimensioned
+	-check-pointers
+	-cilk-serialize
+	-complex-limited-range
+	-check-pointers-dangling=all
+	-check-pointers-dangling=heap
+	-check-pointers-dangling=none
+	-check-pointers-dangling=stack
+	-check-pointers-dangling=<string>
+	-check-pointers-mpx=none
+	-check-pointers-mpx=rw
+	-check-pointers-mpx=write
+	-check-pointers=none
+	-check-pointers=rw
+	-check-pointers=write
+	-check-pointers=<string>
+	-create-pch <string>
+	-dN
+	-early-template-check
+	-falign-loops=<val>
+	-fargument-alias
+	-fargument-noalias-global
+	-farray-notation
+	-fast-transcendentals
+	-fcx-limited-range
+	-fdefer-pop
+	-fdelete-null-pointer-checks
+	-fexec
+	-fext-numeric-literals
+	-ffat-lto-objects
+	-ffloat-store
+	-fimplicit-fp-sse
+	-fimplicit-inline-templates
+	-fimplicit-templates
+	-finhibit-size-directive
+	-finline-atomics
+	-finline-limit
+	-finline-limit=<val>
+	-fkeep-inline-functions
+	-flong-lifetime-temps
+	-fmerge-constants
+	-fminshared
+	-fmpc-privatize
+	-fms-dialect
+	-fnon-lvalue-assign
+	-fnsplit=<val>
+	-fnsplit
+	-fp-port
+	-fp-stack-check
+	-fprotect-parens
+	-freorder-blocks-and-partition
+	-frounding-math
+	-ftoplevel-reorder
+	-ftz
+	-funroll-all-loops
+	-fvar-tracking-assignments
+	-fvar-tracking
+	-fwhole-program
+	-fxray
+	-fextend-arguments=32
+	-fextend-arguments=64
+	-fms-dialect=10
+	-fms-dialect=11
+	-fms-dialect=12
+	-fms-dialect=14
+	-fms-dialect=14.1
+	-fms-dialect=8
+	-fms-dialect=9
+	-fp-speculation=fast
+	-fp-speculation=off
+	-fp-speculation=safe
+	-fp-speculation=strict
+	-fp-trap-all=<string>
+	-fp-trap=<string>
+	-fvisibility-default=<string>
+	-fvisibility-extern=<string>
+	-fvisibility-hidden=<string>
+	-fvisibility-internal=<string>
+	-fvisibility-protected=<string>
+	-gcc-extern-inline
+	-gcc-sys
+	-gidb
+	-guide-data-trans=<val>
+	-guide-par=<val>
+	-guide-vec=<val>
+	-guide=<val>
+	-guide-file-append=<string>
+	-guide-file=<string>
+	-guide-opts=<string>
+	-guide-profile=<string>
+	-guide-routines=<string>
+	-help-pragma
+Finished building: ../lab1.cpp
+	-hlo=<val>
+	-hotpatch=<val>
+	-idb
+	-inline-calloc
+	-inline-factor
+	-inline-factor=<val>
+	-inline-forceinline
+	-inline-level==<val>
+	-inline-max-per-compile
+ 
+	-inline-max-per-compile=<val>
+	-inline-max-per-routine
+	-inline-max-per-routine=<val>
+	-inline-max-size
+	-inline-max-size=<val>
+	-inline-max-total-size
+	-inline-max-total-size=<val>
+	-inline-min-caller-growth
+	-inline-min-caller-growth=<val>
+Building target: lab1
+	-inline-min-size
+	-inline-min-size=<val>
+	-intel-extensions
+	-long-double-as-double
+	-long-double
+Invoking: Intel C++ Linker
+	-mconditional-branch
+	-mfunction-return
+	-mieee-fp
+	-mindirect-branch-register
+	-mindirect-branch
+	-mlong-double-128
+	-mlong-double-64
+	-mlong-double-80
+	-mp1=<val>
+	-mpreferred-stack-boundary=<val>
+	-mregparm-version=<val>
+	-msse2avx
+	-mstringop-inline-threshold=<val>
+	-mstringop-strategy
+	-multibyte-chars
+	-multiline-strings
+	-mconditional-branch=all-fix
+	-mconditional-branch=fast-pattern-fix
+	-mconditional-branch=fast-pattern-report
+	-mconditional-branch=keep
+icpc -O0 -o "lab1"  ./lab1.o   
+	-mconditional-branch=pattern-fix
+	-mconditional-branch=pattern-report
+	-mfunction-return=keep
+	-mfunction-return=thunk
+	-mfunction-return=thunk-extern
+	-mfunction-return=thunk-inline
+	-mindirect-branch=keep
+	-mindirect-branch=thunk
+	-mindirect-branch=thunk-extern
+	-mindirect-branch=thunk-inline
+	-minstruction=<string>
+	-mstringop-strategy=const_size_loop
+	-mstringop-strategy=libcall
+	-mstringop-strategy=rep
+	-mstringop-strategy=<string>
+	-notraceback
+	-par-affinity
+	-par-num-threads=<val>
+	-par-runtime-control=<val>
+	-par-schedule-auto=<val>
+	-par-schedule-dynamic=<val>
+	-par-schedule-guided-analytical=<val>
+	-par-schedule-guided=<val>
+	-par-schedule-runtime
+	-par-schedule-static-balanced=<val>
+	-par-schedule-static-steal=<val>
+	-par-schedule-static=<val>
+	-par-threshold=<val>
+	-parallel-source-info=<val>
+	-parallel
+	-pch
+	-prec-div
+	-prec-sqrt
+	-prof-data-order
+	-prof-func-groups
+	-prof-func-order
+	-prof-hotness-threshold=<val>
+	-prof-merge
+	-prof-src-dir
+	-prof-src-root-cwd
+	-profile-functions
+	-profile-loops-report=<val>
+	-par-affinity=<string>
+	-param-byte-order=legacy
+	-param-byte-order=little-endian
+	-pch-dir <string>
+	-pc=32
+	-pc=64
+	-pc=80
+	-pragma-optimization-level==<string>
+	-prof-dir=<string>
+	-prof-file=<string>
+	-prof-src-root=<string>
+	-prof-value-profiling=<string>
+	-profile-loops=<string>
+	-qemit-build-options
+	-qemit-messages
+	-qoffload-attribute-target
+	-qoffload
+	-qopenmp-offload
+	-qopt-args-in-regs
+	-qopt-assume-safe-padding
+	-qopt-block-factor=<val>
+	-qopt-calloc
+	-qopt-class-analysis
+	-qopt-dynamic-align
+	-qopt-jump-tables=<val>
+	-qopt-malloc-options=<val>
+	-qopt-mem-bandwidth=<val>
+	-qopt-multi-version-aggressive
+	-qopt-prefetch-distance
+	-qopt-prefetch-issue-excl-hint
+	-qopt-prefetch
+	-qopt-prefetch=<val>
+	-qopt-ra-region-strategy
+	-qopt-report-annotate-position
+	-qopt-report-annotate
+	-qopt-report-embed
+	-qopt-report-format
+	-qopt-report-header
+	-qopt-report-help
+	-qopt-report-names
+	-qopt-report-per-object
+	-qopt-report-stdout
+	-qopt-streaming-cache-evict=<val>
+	-qopt-streaming-cache-evict
+	-qopt-subscript-in-range
+	-qopt-threads-per-core=<val>
+	-qopt-threads-per-core
+	-qoffload-arch=<string>
+	-qoffload-attribute-target=<string>
+	-qoffload-build=host
+	-qoffload-build=target
+	-qoffload-option,=<string>
+	-qoffload=mandatory
+	-qoffload=mic
+	-qoffload=none
+	-qoffload=optional
+	-qopenmp-lib=5
+	-qopenmp-lib=compat
+	-qopenmp-lib=<string>
+	-qopenmp-offload=host
+	-qopenmp-offload=mic
+	-qopt-args-in-regs=all
+	-qopt-args-in-regs=none
+	-qopt-args-in-regs=seen
+	-qopt-args-in-regs=<string>
+	-qopt-gather-scatter-unroll=<string>
+	-qopt-jump-tables=default
+	-qopt-jump-tables=large
+	-qopt-jump-tables=never
+	-qopt-jump-tables=<string>
+	-qopt-prefetch-distance=<string>
+	-qopt-ra-region-strategy=block
+	-qopt-ra-region-strategy=default
+	-qopt-ra-region-strategy=loop
+	-qopt-ra-region-strategy=routine
+	-qopt-ra-region-strategy=trace
+	-qopt-report-annotate-position=both
+	-qopt-report-annotate-position=callee
+	-qopt-report-annotate-position=caller
+	-qopt-report-annotate-position=<string>
+	-qopt-report-annotate=html
+	-qopt-report-annotate=text
+	-qopt-report-file=<string>
+	-qopt-report-filter=<string>
+	-qopt-report-format=text
+	-qopt-report-format=vs
+	-qopt-report-names=mangled
+	-qopt-report-names=unmangled
+	-qopt-report-phase=<string>
+	-qopt-report-routine=<string>
+	-qopt-streaming-stores=always
+	-qopt-streaming-stores=auto
+	-qopt-streaming-stores=never
+	-qopt-zmm-usage=high
+	-qopt-zmm-usage=low
+	-resolve-byte-order-mismatch
+	-rev-arg-eval
+	-scalar-rep
+	-scope-alloc
+	-simd-function-pointers
+	-simd
+	-swap-pointers
+	-symcheck
+	-sox=<string>
+	-target-build
+	-traceback
+	-traditional
+	-target-add-aropts=<string>
+	-target-add-ccopts=<string>
+	-target-add-ldopts=<string>
+	-target-arch=<string>
+	-target-build=both
+	-target-build=host
+	-target-build=target
+	-tcheck-pname=<string>
+	-tcheck <string>
+	-unroll-aggressive
+	-unsigned-bitfields
+	-use-asm
+	-use-decl-byte-order
+	-vec-guard-write
+	-vec-threshold=<val>
+	-vecabi=cmdtarget
+	-vecabi=cmdtarget
+	-vecabi=compat
+	-vecabi=compat
+	-vecabi=gcc
+	-vecabi=gcc
+	-vecabi=legacy
+	-vecabi=legacy
+	-w=<val>
 
-../main.cpp(46): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-compilation aborted for ../main.cpp (code 2)
-make: *** [subdir.mk:20: main.o] Ошибка 2
+options being removed: 
+	-A=<string>
+	-comp-obj
+	-fabi-version=<val>
+	-from-obj=<val>
+	-from-rtn=<val>
+	-inl-heur=<val>
+	-ip-no-inlining
+	-ip-no-pinlining
+	-ipo-S
+	-ipo-c
+	-ipo-il
+	-ipo-jobs=<val>
+	-ipo-save
+	-ipo-separate
+	-ip
+	-num-case=<string>
+	-num-obj=<string>
+	-num-opt=<string>
+	-num-rtn=<string>
+	-prof-gen-sampling
+	-prof-gen
+	-prof-use-sampling
+	-prof-gen=<string>
+	-prof-use-sampling=<string>
+	-prof-use=<string>
+	-qoverride-limits
+	-to-obj=<val>
+	-to-rtn=<val>
+	-tcollect-filter=<string>
+	-tcollect=<string>
+icpc: error #10236: File not found:  './lab1.o'
+icpc: command line error: no files specified; for help type "icpc -help"
+make: *** [makefile:55: lab1] Ошибка 1
 "make all" terminated with exit code 2. Build might be incomplete.
-16:00:17 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../main.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.cpp"
-../main.cpp(17): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../main.cpp(46): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../main.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./main.o   
-Finished building target: lab1
- 
-16:00:22 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-make: Цель «all» не требует выполнения команд.
-23:12:08 **** Incremental Build of configuration Debug for project lab1 ****
+00:54:42 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
 Building file: ../lab1.cpp
 Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
+icpc -g -O0 -qnextgen-diag -parallel -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+icpx: command line warning #10148: option '-parallel' not supported
+The LLVM based Intel Compiler maintains the expectation to be compatible with
+the current Intel Compiler product. There are options and capabilities that
+we are planning to support in the future but are not currently available.
+There are also options we do not plan to support.
 
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
+options to be supported: 
+	-K=Pentium
+	-K=i386
+	-K=i486
+	-K=pentium
+	-K=rtti
+	-Wbrief
+	-Wchar-subscripts
+	-Wp64
+	-Wpch-messages
+	-Wremarks
+	-alias-const
+	-auto-ilp32
+	-auto-p32
+	-ax=<string>
+	-check-pointers-dangling
+	-check-pointers-mpx
+	-check-pointers-narrowing
+	-check-pointers-undimensioned
+	-check-pointers
+	-cilk-serialize
+	-complex-limited-range
+	-check-pointers-dangling=all
+	-check-pointers-dangling=heap
+	-check-pointers-dangling=none
+	-check-pointers-dangling=stack
+	-check-pointers-dangling=<string>
+	-check-pointers-mpx=none
+	-check-pointers-mpx=rw
+	-check-pointers-mpx=write
+	-check-pointers=none
+	-check-pointers=rw
+	-check-pointers=write
+	-check-pointers=<string>
+	-create-pch <string>
+	-dN
+	-early-template-check
+	-falign-loops=<val>
+	-fargument-alias
+	-fargument-noalias-global
+	-farray-notation
+	-fast-transcendentals
+	-fcx-limited-range
+	-fdefer-pop
+	-fdelete-null-pointer-checks
+	-fexec
+	-fext-numeric-literals
+	-ffat-lto-objects
+	-ffloat-store
+	-fimplicit-fp-sse
+	-fimplicit-inline-templates
+	-fimplicit-templates
+	-finhibit-size-directive
+	-finline-atomics
+	-finline-limit
+	-finline-limit=<val>
+	-fkeep-inline-functions
+	-flong-lifetime-temps
+	-fmerge-constants
+	-fminshared
+	-fmpc-privatize
+	-fms-dialect
+	-fnon-lvalue-assign
+	-fnsplit=<val>
+	-fnsplit
+	-fp-port
+	-fp-stack-check
+	-fprotect-parens
+	-freorder-blocks-and-partition
+	-frounding-math
+	-ftoplevel-reorder
+	-ftz
+	-funroll-all-loops
+	-fvar-tracking-assignments
+	-fvar-tracking
+	-fwhole-program
+	-fxray
+	-fextend-arguments=32
+	-fextend-arguments=64
+	-fms-dialect=10
+	-fms-dialect=11
+	-fms-dialect=12
+	-fms-dialect=14
+	-fms-dialect=14.1
+	-fms-dialect=8
+	-fms-dialect=9
+	-fp-speculation=fast
+	-fp-speculation=off
+	-fp-speculation=safe
+	-fp-speculation=strict
+	-fp-trap-all=<string>
+	-fp-trap=<string>
+	-fvisibility-default=<string>
+	-fvisibility-extern=<string>
+	-fvisibility-hidden=<string>
+	-fvisibility-internal=<string>
+	-fvisibility-protected=<string>
+	-gcc-extern-inline
+	-gcc-sys
+	-gidb
+	-guide-data-trans=<val>
+	-guide-par=<val>
+	-guide-vec=<val>
+	-guide=<val>
+	-guide-file-append=<string>
+	-guide-file=<string>
+	-guide-opts=<string>
+	-guide-profile=<string>
+	-guide-routines=<string>
+	-help-pragma
+	-hlo=<val>
+	-hotpatch=<val>
+	-idb
+	-inline-calloc
+	-inline-factor
+	-inline-factor=<val>
+	-inline-forceinline
+	-inline-level==<val>
+	-inline-max-per-compile
+	-inline-max-per-compile=<val>
+	-inline-max-per-routine
 Finished building: ../lab1.cpp
+	-inline-max-per-routine=<val>
+	-inline-max-size
+	-inline-max-size=<val>
+	-inline-max-total-size
+	-inline-max-total-size=<val>
+	-inline-min-caller-growth
+	-inline-min-caller-growth=<val>
+	-inline-min-size
+	-inline-min-size=<val>
+	-intel-extensions
+	-long-double-as-double
+	-long-double
+	-mconditional-branch
+	-mfunction-return
+	-mieee-fp
+	-mindirect-branch-register
+	-mindirect-branch
+	-mlong-double-128
+	-mlong-double-64
+	-mlong-double-80
+	-mp1=<val>
+	-mpreferred-stack-boundary=<val>
+	-mregparm-version=<val>
+	-msse2avx
+	-mstringop-inline-threshold=<val>
+	-mstringop-strategy
+	-multibyte-chars
+	-multiline-strings
+	-mconditional-branch=all-fix
+	-mconditional-branch=fast-pattern-fix
+	-mconditional-branch=fast-pattern-report
+	-mconditional-branch=keep
+	-mconditional-branch=pattern-fix
+	-mconditional-branch=pattern-report
+	-mfunction-return=keep
+	-mfunction-return=thunk
+	-mfunction-return=thunk-extern
+	-mfunction-return=thunk-inline
+	-mindirect-branch=keep
+	-mindirect-branch=thunk
+	-mindirect-branch=thunk-extern
+	-mindirect-branch=thunk-inline
+	-minstruction=<string>
+	-mstringop-strategy=const_size_loop
+	-mstringop-strategy=libcall
+	-mstringop-strategy=rep
+	-mstringop-strategy=<string>
+	-notraceback
+	-par-affinity
+	-par-num-threads=<val>
+	-par-runtime-control=<val>
+	-par-schedule-auto=<val>
+	-par-schedule-dynamic=<val>
+	-par-schedule-guided-analytical=<val>
+	-par-schedule-guided=<val>
+	-par-schedule-runtime
+	-par-schedule-static-balanced=<val>
+	-par-schedule-static-steal=<val>
+	-par-schedule-static=<val>
+	-par-threshold=<val>
+	-parallel-source-info=<val>
+	-parallel
+	-pch
+	-prec-div
+	-prec-sqrt
+	-prof-data-order
+	-prof-func-groups
+	-prof-func-order
+	-prof-hotness-threshold=<val>
+	-prof-merge
+	-prof-src-dir
+	-prof-src-root-cwd
+	-profile-functions
+	-profile-loops-report=<val>
+	-par-affinity=<string>
+	-param-byte-order=legacy
+	-param-byte-order=little-endian
+	-pch-dir <string>
+	-pc=32
+	-pc=64
+	-pc=80
+	-pragma-optimization-level==<string>
+	-prof-dir=<string>
+	-prof-file=<string>
+	-prof-src-root=<string>
+	-prof-value-profiling=<string>
+	-profile-loops=<string>
+	-qemit-build-options
+	-qemit-messages
+	-qoffload-attribute-target
+	-qoffload
+	-qopenmp-offload
+	-qopt-args-in-regs
+	-qopt-assume-safe-padding
+	-qopt-block-factor=<val>
+	-qopt-calloc
+	-qopt-class-analysis
+	-qopt-dynamic-align
+	-qopt-jump-tables=<val>
+	-qopt-malloc-options=<val>
+	-qopt-mem-bandwidth=<val>
+	-qopt-multi-version-aggressive
+	-qopt-prefetch-distance
+	-qopt-prefetch-issue-excl-hint
+	-qopt-prefetch
+	-qopt-prefetch=<val>
+	-qopt-ra-region-strategy
+	-qopt-report-annotate-position
+	-qopt-report-annotate
+	-qopt-report-embed
+	-qopt-report-format
+	-qopt-report-header
+	-qopt-report-help
+	-qopt-report-names
+	-qopt-report-per-object
+	-qopt-report-stdout
+	-qopt-streaming-cache-evict=<val>
+	-qopt-streaming-cache-evict
+	-qopt-subscript-in-range
+	-qopt-threads-per-core=<val>
+	-qopt-threads-per-core
+	-qoffload-arch=<string>
+	-qoffload-attribute-target=<string>
+	-qoffload-build=host
+	-qoffload-build=target
+	-qoffload-option,=<string>
+	-qoffload=mandatory
+	-qoffload=mic
+	-qoffload=none
+	-qoffload=optional
+	-qopenmp-lib=5
+	-qopenmp-lib=compat
+	-qopenmp-lib=<string>
+	-qopenmp-offload=host
+	-qopenmp-offload=mic
+	-qopt-args-in-regs=all
+	-qopt-args-in-regs=none
+	-qopt-args-in-regs=seen
+	-qopt-args-in-regs=<string>
+	-qopt-gather-scatter-unroll=<string>
+	-qopt-jump-tables=default
+	-qopt-jump-tables=large
+	-qopt-jump-tables=never
+	-qopt-jump-tables=<string>
+	-qopt-prefetch-distance=<string>
+	-qopt-ra-region-strategy=block
+	-qopt-ra-region-strategy=default
+	-qopt-ra-region-strategy=loop
+	-qopt-ra-region-strategy=routine
+	-qopt-ra-region-strategy=trace
+	-qopt-report-annotate-position=both
+	-qopt-report-annotate-position=callee
+	-qopt-report-annotate-position=caller
+	-qopt-report-annotate-position=<string>
+ 
+	-qopt-report-annotate=html
+	-qopt-report-annotate=text
+	-qopt-report-file=<string>
+	-qopt-report-filter=<string>
+	-qopt-report-format=text
+	-qopt-report-format=vs
+	-qopt-report-names=mangled
+	-qopt-report-names=unmangled
+	-qopt-report-phase=<string>
+	-qopt-report-routine=<string>
+	-qopt-streaming-stores=always
+	-qopt-streaming-stores=auto
+	-qopt-streaming-stores=never
+	-qopt-zmm-usage=high
+	-qopt-zmm-usage=low
+	-resolve-byte-order-mismatch
+	-rev-arg-eval
+	-scalar-rep
+	-scope-alloc
+	-simd-function-pointers
+	-simd
+	-swap-pointers
+	-symcheck
+	-sox=<string>
+	-target-build
+	-traceback
+	-traditional
+	-target-add-aropts=<string>
+	-target-add-ccopts=<string>
+	-target-add-ldopts=<string>
+	-target-arch=<string>
+	-target-build=both
+	-target-build=host
+	-target-build=target
+	-tcheck-pname=<string>
+	-tcheck <string>
+	-unroll-aggressive
+	-unsigned-bitfields
+	-use-asm
+	-use-decl-byte-order
+	-vec-guard-write
+	-vec-threshold=<val>
+	-vecabi=cmdtarget
+	-vecabi=cmdtarget
+	-vecabi=compat
+	-vecabi=compat
+	-vecabi=gcc
+	-vecabi=gcc
+	-vecabi=legacy
+	-vecabi=legacy
+	-w=<val>
+
+options being removed: 
+	-A=<string>
+	-comp-obj
+	-fabi-version=<val>
+	-from-obj=<val>
+	-from-rtn=<val>
+	-inl-heur=<val>
+	-ip-no-inlining
+	-ip-no-pinlining
+	-ipo-S
+	-ipo-c
+	-ipo-il
+	-ipo-jobs=<val>
+	-ipo-save
+	-ipo-separate
+	-ip
+	-num-case=<string>
+	-num-obj=<string>
+	-num-opt=<string>
+	-num-rtn=<string>
+	-prof-gen-sampling
+	-prof-gen
+	-prof-use-sampling
+	-prof-gen=<string>
+	-prof-use-sampling=<string>
+	-prof-use=<string>
+	-qoverride-limits
+	-to-obj=<val>
+	-to-rtn=<val>
+	-tcollect-filter=<string>
+	-tcollect=<string>
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+icpc: error #10236: File not found:  './lab1.o'
+icpc: command line error: no files specified; for help type "icpc -help"
+make: *** [makefile:55: lab1] Ошибка 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:56:27 **** Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -qnextgen-diag -parallel -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+icpx: command line warning #10148: option '-parallel' not supported
+The LLVM based Intel Compiler maintains the expectation to be compatible with
+the current Intel Compiler product. There are options and capabilities that
+we are planning to support in the future but are not currently available.
+There are also options we do not plan to support.
+
+options to be supported: 
+	-K=Pentium
+	-K=i386
+	-K=i486
+	-K=pentium
+	-K=rtti
+	-Wbrief
+	-Wchar-subscripts
+	-Wp64
+	-Wpch-messages
+	-Wremarks
+	-alias-const
+	-auto-ilp32
+	-auto-p32
+	-ax=<string>
+	-check-pointers-dangling
+	-check-pointers-mpx
+	-check-pointers-narrowing
+	-check-pointers-undimensioned
+	-check-pointers
+	-cilk-serialize
+Finished building: ../lab1.cpp
+	-complex-limited-range
+	-check-pointers-dangling=all
+	-check-pointers-dangling=heap
+	-check-pointers-dangling=none
+	-check-pointers-dangling=stack
+	-check-pointers-dangling=<string>
+	-check-pointers-mpx=none
+	-check-pointers-mpx=rw
+	-check-pointers-mpx=write
+	-check-pointers=none
+	-check-pointers=rw
+	-check-pointers=write
+	-check-pointers=<string>
+	-create-pch <string>
+	-dN
+	-early-template-check
+	-falign-loops=<val>
+	-fargument-alias
+ 
+	-fargument-noalias-global
+	-farray-notation
+	-fast-transcendentals
+	-fcx-limited-range
+	-fdefer-pop
+	-fdelete-null-pointer-checks
+	-fexec
+	-fext-numeric-literals
+Building target: lab1
+	-ffat-lto-objects
+	-ffloat-store
+	-fimplicit-fp-sse
+	-fimplicit-inline-templates
+	-fimplicit-templates
+	-finhibit-size-directive
+	-finline-atomics
+	-finline-limit
+	-finline-limit=<val>
+	-fkeep-inline-functions
+	-flong-lifetime-temps
+Invoking: Intel C++ Linker
+	-fmerge-constants
+	-fminshared
+	-fmpc-privatize
+	-fms-dialect
+	-fnon-lvalue-assign
+icpc -O0 -o "lab1"  ./lab1.o   
+	-fnsplit=<val>
+	-fnsplit
+	-fp-port
+	-fp-stack-check
+	-fprotect-parens
+	-freorder-blocks-and-partition
+	-frounding-math
+	-ftoplevel-reorder
+	-ftz
+	-funroll-all-loops
+	-fvar-tracking-assignments
+	-fvar-tracking
+	-fwhole-program
+	-fxray
+	-fextend-arguments=32
+	-fextend-arguments=64
+	-fms-dialect=10
+	-fms-dialect=11
+	-fms-dialect=12
+	-fms-dialect=14
+	-fms-dialect=14.1
+	-fms-dialect=8
+	-fms-dialect=9
+	-fp-speculation=fast
+	-fp-speculation=off
+	-fp-speculation=safe
+	-fp-speculation=strict
+	-fp-trap-all=<string>
+	-fp-trap=<string>
+	-fvisibility-default=<string>
+	-fvisibility-extern=<string>
+	-fvisibility-hidden=<string>
+	-fvisibility-internal=<string>
+	-fvisibility-protected=<string>
+	-gcc-extern-inline
+	-gcc-sys
+	-gidb
+	-guide-data-trans=<val>
+	-guide-par=<val>
+	-guide-vec=<val>
+	-guide=<val>
+	-guide-file-append=<string>
+	-guide-file=<string>
+	-guide-opts=<string>
+	-guide-profile=<string>
+	-guide-routines=<string>
+	-help-pragma
+	-hlo=<val>
+	-hotpatch=<val>
+	-idb
+	-inline-calloc
+	-inline-factor
+	-inline-factor=<val>
+	-inline-forceinline
+	-inline-level==<val>
+	-inline-max-per-compile
+	-inline-max-per-compile=<val>
+	-inline-max-per-routine
+	-inline-max-per-routine=<val>
+	-inline-max-size
+	-inline-max-size=<val>
+	-inline-max-total-size
+	-inline-max-total-size=<val>
+	-inline-min-caller-growth
+	-inline-min-caller-growth=<val>
+	-inline-min-size
+	-inline-min-size=<val>
+	-intel-extensions
+	-long-double-as-double
+	-long-double
+	-mconditional-branch
+	-mfunction-return
+	-mieee-fp
+	-mindirect-branch-register
+	-mindirect-branch
+	-mlong-double-128
+	-mlong-double-64
+	-mlong-double-80
+	-mp1=<val>
+	-mpreferred-stack-boundary=<val>
+	-mregparm-version=<val>
+	-msse2avx
+	-mstringop-inline-threshold=<val>
+	-mstringop-strategy
+	-multibyte-chars
+	-multiline-strings
+	-mconditional-branch=all-fix
+	-mconditional-branch=fast-pattern-fix
+	-mconditional-branch=fast-pattern-report
+	-mconditional-branch=keep
+	-mconditional-branch=pattern-fix
+	-mconditional-branch=pattern-report
+	-mfunction-return=keep
+	-mfunction-return=thunk
+	-mfunction-return=thunk-extern
+	-mfunction-return=thunk-inline
+	-mindirect-branch=keep
+	-mindirect-branch=thunk
+	-mindirect-branch=thunk-extern
+	-mindirect-branch=thunk-inline
+	-minstruction=<string>
+	-mstringop-strategy=const_size_loop
+	-mstringop-strategy=libcall
+	-mstringop-strategy=rep
+	-mstringop-strategy=<string>
+	-notraceback
+	-par-affinity
+	-par-num-threads=<val>
+	-par-runtime-control=<val>
+	-par-schedule-auto=<val>
+	-par-schedule-dynamic=<val>
+	-par-schedule-guided-analytical=<val>
+	-par-schedule-guided=<val>
+	-par-schedule-runtime
+	-par-schedule-static-balanced=<val>
+	-par-schedule-static-steal=<val>
+	-par-schedule-static=<val>
+	-par-threshold=<val>
+	-parallel-source-info=<val>
+	-parallel
+	-pch
+	-prec-div
+	-prec-sqrt
+	-prof-data-order
+	-prof-func-groups
+	-prof-func-order
+	-prof-hotness-threshold=<val>
+	-prof-merge
+	-prof-src-dir
+	-prof-src-root-cwd
+	-profile-functions
+	-profile-loops-report=<val>
+	-par-affinity=<string>
+	-param-byte-order=legacy
+	-param-byte-order=little-endian
+	-pch-dir <string>
+	-pc=32
+	-pc=64
+	-pc=80
+	-pragma-optimization-level==<string>
+	-prof-dir=<string>
+	-prof-file=<string>
+	-prof-src-root=<string>
+	-prof-value-profiling=<string>
+	-profile-loops=<string>
+	-qemit-build-options
+	-qemit-messages
+	-qoffload-attribute-target
+	-qoffload
+	-qopenmp-offload
+	-qopt-args-in-regs
+	-qopt-assume-safe-padding
+	-qopt-block-factor=<val>
+	-qopt-calloc
+	-qopt-class-analysis
+	-qopt-dynamic-align
+	-qopt-jump-tables=<val>
+	-qopt-malloc-options=<val>
+	-qopt-mem-bandwidth=<val>
+	-qopt-multi-version-aggressive
+	-qopt-prefetch-distance
+	-qopt-prefetch-issue-excl-hint
+	-qopt-prefetch
+	-qopt-prefetch=<val>
+	-qopt-ra-region-strategy
+	-qopt-report-annotate-position
+	-qopt-report-annotate
+	-qopt-report-embed
+	-qopt-report-format
+	-qopt-report-header
+	-qopt-report-help
+	-qopt-report-names
+	-qopt-report-per-object
+	-qopt-report-stdout
+	-qopt-streaming-cache-evict=<val>
+	-qopt-streaming-cache-evict
+	-qopt-subscript-in-range
+	-qopt-threads-per-core=<val>
+	-qopt-threads-per-core
+	-qoffload-arch=<string>
+	-qoffload-attribute-target=<string>
+	-qoffload-build=host
+	-qoffload-build=target
+	-qoffload-option,=<string>
+	-qoffload=mandatory
+	-qoffload=mic
+	-qoffload=none
+	-qoffload=optional
+	-qopenmp-lib=5
+	-qopenmp-lib=compat
+	-qopenmp-lib=<string>
+	-qopenmp-offload=host
+	-qopenmp-offload=mic
+	-qopt-args-in-regs=all
+	-qopt-args-in-regs=none
+	-qopt-args-in-regs=seen
+	-qopt-args-in-regs=<string>
+	-qopt-gather-scatter-unroll=<string>
+	-qopt-jump-tables=default
+	-qopt-jump-tables=large
+	-qopt-jump-tables=never
+	-qopt-jump-tables=<string>
+	-qopt-prefetch-distance=<string>
+	-qopt-ra-region-strategy=block
+	-qopt-ra-region-strategy=default
+	-qopt-ra-region-strategy=loop
+	-qopt-ra-region-strategy=routine
+	-qopt-ra-region-strategy=trace
+	-qopt-report-annotate-position=both
+	-qopt-report-annotate-position=callee
+	-qopt-report-annotate-position=caller
+	-qopt-report-annotate-position=<string>
+	-qopt-report-annotate=html
+	-qopt-report-annotate=text
+	-qopt-report-file=<string>
+	-qopt-report-filter=<string>
+	-qopt-report-format=text
+	-qopt-report-format=vs
+	-qopt-report-names=mangled
+	-qopt-report-names=unmangled
+	-qopt-report-phase=<string>
+	-qopt-report-routine=<string>
+	-qopt-streaming-stores=always
+	-qopt-streaming-stores=auto
+	-qopt-streaming-stores=never
+	-qopt-zmm-usage=high
+	-qopt-zmm-usage=low
+	-resolve-byte-order-mismatch
+	-rev-arg-eval
+	-scalar-rep
+	-scope-alloc
+	-simd-function-pointers
+	-simd
+	-swap-pointers
+	-symcheck
+	-sox=<string>
+	-target-build
+	-traceback
+	-traditional
+	-target-add-aropts=<string>
+	-target-add-ccopts=<string>
+	-target-add-ldopts=<string>
+	-target-arch=<string>
+	-target-build=both
+	-target-build=host
+	-target-build=target
+	-tcheck-pname=<string>
+	-tcheck <string>
+	-unroll-aggressive
+	-unsigned-bitfields
+	-use-asm
+	-use-decl-byte-order
+	-vec-guard-write
+	-vec-threshold=<val>
+	-vecabi=cmdtarget
+	-vecabi=cmdtarget
+	-vecabi=compat
+	-vecabi=compat
+	-vecabi=gcc
+	-vecabi=gcc
+	-vecabi=legacy
+	-vecabi=legacy
+	-w=<val>
+
+options being removed: 
+	-A=<string>
+	-comp-obj
+	-fabi-version=<val>
+	-from-obj=<val>
+	-from-rtn=<val>
+	-inl-heur=<val>
+	-ip-no-inlining
+	-ip-no-pinlining
+	-ipo-S
+	-ipo-c
+	-ipo-il
+	-ipo-jobs=<val>
+	-ipo-save
+	-ipo-separate
+	-ip
+	-num-case=<string>
+	-num-obj=<string>
+	-num-opt=<string>
+	-num-rtn=<string>
+	-prof-gen-sampling
+	-prof-gen
+	-prof-use-sampling
+	-prof-gen=<string>
+	-prof-use-sampling=<string>
+	-prof-use=<string>
+	-qoverride-limits
+	-to-obj=<val>
+	-to-rtn=<val>
+	-tcollect-filter=<string>
+	-tcollect=<string>
+icpc: error #10236: File not found:  './lab1.o'
+icpc: command line error: no files specified; for help type "icpc -help"
+make: *** [makefile:55: lab1] Ошибка 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:57:25 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -qnextgen-diag -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+The LLVM based Intel Compiler maintains the expectation to be compatible with
+the current Intel Compiler product. There are options and capabilities that
+we are planning to support in the future but are not currently available.
+There are also options we do not plan to support.
+
+options to be supported: 
+	-K=Pentium
+	-K=i386
+	-K=i486
+	-K=pentium
+	-K=rtti
+	-Wbrief
+	-Wchar-subscripts
+	-Wp64
+	-Wpch-messages
+	-Wremarks
+	-alias-const
+	-auto-ilp32
+	-auto-p32
+	-ax=<string>
+	-check-pointers-dangling
+	-check-pointers-mpx
+	-check-pointers-narrowing
+	-check-pointers-undimensioned
+	-check-pointers
+	-cilk-serialize
+	-complex-limited-range
+	-check-pointers-dangling=all
+	-check-pointers-dangling=heap
+	-check-pointers-dangling=none
+	-check-pointers-dangling=stack
+	-check-pointers-dangling=<string>
+	-check-pointers-mpx=none
+	-check-pointers-mpx=rw
+	-check-pointers-mpx=write
+	-check-pointers=none
+	-check-pointers=rw
+	-check-pointers=write
+	-check-pointers=<string>
+	-create-pch <string>
+	-dN
+	-early-template-check
+	-falign-loops=<val>
+	-fargument-alias
+	-fargument-noalias-global
+	-farray-notation
+	-fast-transcendentals
+	-fcx-limited-range
+	-fdefer-pop
+	-fdelete-null-pointer-checks
+	-fexec
+	-fext-numeric-literals
+	-ffat-lto-objects
+	-ffloat-store
+	-fimplicit-fp-sse
+	-fimplicit-inline-templates
+	-fimplicit-templates
+	-finhibit-size-directive
+	-finline-atomics
+	-finline-limit
+	-finline-limit=<val>
+	-fkeep-inline-functions
+	-flong-lifetime-temps
+	-fmerge-constants
+	-fminshared
+	-fmpc-privatize
+	-fms-dialect
+	-fnon-lvalue-assign
+	-fnsplit=<val>
+	-fnsplit
+	-fp-port
+	-fp-stack-check
+	-fprotect-parens
+	-freorder-blocks-and-partition
+	-frounding-math
+	-ftoplevel-reorder
+	-ftz
+	-funroll-all-loops
+	-fvar-tracking-assignments
+	-fvar-tracking
+	-fwhole-program
+	-fxray
+	-fextend-arguments=32
+	-fextend-arguments=64
+	-fms-dialect=10
+	-fms-dialect=11
+	-fms-dialect=12
+	-fms-dialect=14
+	-fms-dialect=14.1
+	-fms-dialect=8
+	-fms-dialect=9
+	-fp-speculation=fast
+	-fp-speculation=off
+	-fp-speculation=safe
+	-fp-speculation=strict
+	-fp-trap-all=<string>
+	-fp-trap=<string>
+	-fvisibility-default=<string>
+	-fvisibility-extern=<string>
+	-fvisibility-hidden=<string>
+	-fvisibility-internal=<string>
+	-fvisibility-protected=<string>
+	-gcc-extern-inline
+	-gcc-sys
+	-gidb
+	-guide-data-trans=<val>
+	-guide-par=<val>
+	-guide-vec=<val>
+	-guide=<val>
+	-guide-file-append=<string>
+	-guide-file=<string>
+	-guide-opts=<string>
+	-guide-profile=<string>
+	-guide-routines=<string>
+	-help-pragma
+	-hlo=<val>
+	-hotpatch=<val>
+	-idb
+	-inline-calloc
+	-inline-factor
+	-inline-factor=<val>
+	-inline-forceinline
+	-inline-level==<val>
+	-inline-max-per-compile
+	-inline-max-per-compile=<val>
+	-inline-max-per-routine
+	-inline-max-per-routine=<val>
+	-inline-max-size
+	-inline-max-size=<val>
+	-inline-max-total-size
+	-inline-max-total-size=<val>
+	-inline-min-caller-growth
+	-inline-min-caller-growth=<val>
+	-inline-min-size
+	-inline-min-size=<val>
+	-intel-extensions
+	-long-double-as-double
+	-long-double
+	-mconditional-branch
+	-mfunction-return
+	-mieee-fp
+	-mindirect-branch-register
+	-mindirect-branch
+	-mlong-double-128
+	-mlong-double-64
+	-mlong-double-80
+	-mp1=<val>
+	-mpreferred-stack-boundary=<val>
+	-mregparm-version=<val>
+	-msse2avx
+	-mstringop-inline-threshold=<val>
+	-mstringop-strategy
+	-multibyte-chars
+	-multiline-strings
+	-mconditional-branch=all-fix
+	-mconditional-branch=fast-pattern-fix
+	-mconditional-branch=fast-pattern-report
+	-mconditional-branch=keep
+	-mconditional-branch=pattern-fix
+	-mconditional-branch=pattern-report
+	-mfunction-return=keep
+	-mfunction-return=thunk
+	-mfunction-return=thunk-extern
+	-mfunction-return=thunk-inline
+	-mindirect-branch=keep
+	-mindirect-branch=thunk
+	-mindirect-branch=thunk-extern
+	-mindirect-branch=thunk-inline
+	-minstruction=<string>
+	-mstringop-strategy=const_size_loop
+	-mstringop-strategy=libcall
+	-mstringop-strategy=rep
+	-mstringop-strategy=<string>
+	-notraceback
+	-par-affinity
+	-par-num-threads=<val>
+	-par-runtime-control=<val>
+	-par-schedule-auto=<val>
+	-par-schedule-dynamic=<val>
+	-par-schedule-guided-analytical=<val>
+	-par-schedule-guided=<val>
+	-par-schedule-runtime
+	-par-schedule-static-balanced=<val>
+	-par-schedule-static-steal=<val>
+	-par-schedule-static=<val>
+	-par-threshold=<val>
+	-parallel-source-info=<val>
+	-parallel
+	-pch
+	-prec-div
+	-prec-sqrt
+	-prof-data-order
+	-prof-func-groups
+	-prof-func-order
+	-prof-hotness-threshold=<val>
+	-prof-merge
+	-prof-src-dir
+	-prof-src-root-cwd
+	-profile-functions
+	-profile-loops-report=<val>
+	-par-affinity=<string>
+	-param-byte-order=legacy
+	-param-byte-order=little-endian
+	-pch-dir <string>
+	-pc=32
+	-pc=64
+	-pc=80
+	-pragma-optimization-level==<string>
+	-prof-dir=<string>
+	-prof-file=<string>
+	-prof-src-root=<string>
+	-prof-value-profiling=<string>
+	-profile-loops=<string>
+	-qemit-build-options
+	-qemit-messages
+	-qoffload-attribute-target
+	-qoffload
+	-qopenmp-offload
+	-qopt-args-in-regs
+	-qopt-assume-safe-padding
+	-qopt-block-factor=<val>
+	-qopt-calloc
+	-qopt-class-analysis
+	-qopt-dynamic-align
+	-qopt-jump-tables=<val>
+	-qopt-malloc-options=<val>
+	-qopt-mem-bandwidth=<val>
+	-qopt-multi-version-aggressive
+	-qopt-prefetch-distance
+	-qopt-prefetch-issue-excl-hint
+	-qopt-prefetch
+	-qopt-prefetch=<val>
+	-qopt-ra-region-strategy
+	-qopt-report-annotate-position
+	-qopt-report-annotate
+	-qopt-report-embed
+	-qopt-report-format
+	-qopt-report-header
+	-qopt-report-help
+	-qopt-report-names
+	-qopt-report-per-object
+	-qopt-report-stdout
+	-qopt-streaming-cache-evict=<val>
+	-qopt-streaming-cache-evict
+	-qopt-subscript-in-range
+	-qopt-threads-per-core=<val>
+	-qopt-threads-per-core
+	-qoffload-arch=<string>
+	-qoffload-attribute-target=<string>
+	-qoffload-build=host
+	-qoffload-build=target
+	-qoffload-option,=<string>
+	-qoffload=mandatory
+	-qoffload=mic
+	-qoffload=none
+	-qoffload=optional
+	-qopenmp-lib=5
+	-qopenmp-lib=compat
+	-qopenmp-lib=<string>
+	-qopenmp-offload=host
+	-qopenmp-offload=mic
+	-qopt-args-in-regs=all
+	-qopt-args-in-regs=none
+	-qopt-args-in-regs=seen
+	-qopt-args-in-regs=<string>
+	-qopt-gather-scatter-unroll=<string>
+	-qopt-jump-tables=default
+	-qopt-jump-tables=large
+	-qopt-jump-tables=never
+	-qopt-jump-tables=<string>
+	-qopt-prefetch-distance=<string>
+	-qopt-ra-region-strategy=block
+	-qopt-ra-region-strategy=default
+	-qopt-ra-region-strategy=loop
+	-qopt-ra-region-strategy=routine
+	-qopt-ra-region-strategy=trace
+	-qopt-report-annotate-position=both
+	-qopt-report-annotate-position=callee
+	-qopt-report-annotate-position=caller
+	-qopt-report-annotate-position=<string>
+	-qopt-report-annotate=html
+	-qopt-report-annotate=text
+	-qopt-report-file=<string>
+	-qopt-report-filter=<string>
+	-qopt-report-format=text
+	-qopt-report-format=vs
+	-qopt-report-names=mangled
+	-qopt-report-names=unmangled
+	-qopt-report-phase=<string>
+	-qopt-report-routine=<string>
+	-qopt-streaming-stores=always
+	-qopt-streaming-stores=auto
+	-qopt-streaming-stores=never
+	-qopt-zmm-usage=high
+	-qopt-zmm-usage=low
+	-resolve-byte-order-mismatch
+	-rev-arg-eval
+	-scalar-rep
+	-scope-alloc
+	-simd-function-pointers
+Finished building: ../lab1.cpp
+	-simd
+	-swap-pointers
+	-symcheck
+	-sox=<string>
+	-target-build
+	-traceback
+	-traditional
+	-target-add-aropts=<string>
+	-target-add-ccopts=<string>
+	-target-add-ldopts=<string>
+	-target-arch=<string>
+	-target-build=both
+	-target-build=host
+	-target-build=target
+	-tcheck-pname=<string>
+	-tcheck <string>
+	-unroll-aggressive
+	-unsigned-bitfields
+	-use-asm
+	-use-decl-byte-order
+	-vec-guard-write
+	-vec-threshold=<val>
+	-vecabi=cmdtarget
+	-vecabi=cmdtarget
+	-vecabi=compat
+	-vecabi=compat
+	-vecabi=gcc
+	-vecabi=gcc
+	-vecabi=legacy
+	-vecabi=legacy
+	-w=<val>
+
+options being removed: 
+	-A=<string>
+	-comp-obj
+	-fabi-version=<val>
+	-from-obj=<val>
+	-from-rtn=<val>
+	-inl-heur=<val>
+	-ip-no-inlining
+	-ip-no-pinlining
+	-ipo-S
+	-ipo-c
+	-ipo-il
+	-ipo-jobs=<val>
+	-ipo-save
+	-ipo-separate
+	-ip
+	-num-case=<string>
+	-num-obj=<string>
+	-num-opt=<string>
+	-num-rtn=<string>
+	-prof-gen-sampling
+	-prof-gen
+	-prof-use-sampling
+	-prof-gen=<string>
+	-prof-use-sampling=<string>
+	-prof-use=<string>
+	-qoverride-limits
+	-to-obj=<val>
+	-to-rtn=<val>
+	-tcollect-filter=<string>
+	-tcollect=<string>
  
 Building target: lab1
 Invoking: Intel C++ Linker
 icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-23:15:57 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-make: Цель «all» не требует выполнения команд.
-23:21:47 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-make: Цель «all» не требует выполнения команд.
-23:22:59 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-make: Цель «all» не требует выполнения команд.
-23:23:25 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-23:23:39 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-make: Цель «all» не требует выполнения команд.
-23:24:32 **** Clean-only build of configuration Debug for project lab1 ****
+icpc: error #10236: File not found:  './lab1.o'
+icpc: command line error: no files specified; for help type "icpc -help"
+make: *** [makefile:55: lab1] Ошибка 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:58:02 **** Clean-only build of configuration Debug for project lab1 ****
 make clean 
 rm -rf  ./lab1.o  ./lab1.d  lab1
  
-23:24:35 **** Build of configuration Debug for project lab1 ****
+00:58:03 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
 Building file: ../lab1.cpp
 Invoking: Intel C++ Compiler
@@ -140,393 +1545,66 @@ Invoking: Intel C++ Linker
 icpc -O0 -o "lab1"  ./lab1.o   
 Finished building target: lab1
  
-23:25:47 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-23:28:26 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-23:28:36 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-23:34:31 **** Incremental Build of configuration Debug for project lab1 ****
+00:58:06 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
 make: Цель «all» не требует выполнения команд.
-23:36:53 **** Incremental Build of configuration Debug for project lab1 ****
+00:58:13 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
 make: Цель «all» не требует выполнения команд.
-23:38:04 **** Incremental Build of configuration Debug for project lab1 ****
+15:26:06 **** Clean-only build of configuration Debug for project lab1 ****
+make clean 
+rm -rf  ./lab1.o  ./lab1.d  lab1
+ 
+15:26:06 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+15:26:17 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
 make: Цель «all» не требует выполнения команд.
-23:39:17 **** Incremental Build of configuration Debug for project lab1 ****
+15:26:20 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
 make: Цель «all» не требует выполнения команд.
-23:39:28 **** Incremental Build of configuration Debug for project lab1 ****
+15:29:29 **** Clean-only build of configuration Debug for project lab1 ****
+make clean 
+rm -rf  ./lab1.o  ./lab1.d  lab1
+ 
+15:29:31 **** Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../lab1.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
+../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(long i = 0; i < size; ++i)
+  	^
+
+../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  		cilk_spawn ParallelSort(begin, middle);
+  		^
+
+Finished building: ../lab1.cpp
+ 
+Building target: lab1
+Invoking: Intel C++ Linker
+icpc -O0 -o "lab1"  ./lab1.o   
+Finished building target: lab1
+ 
+15:29:43 **** Incremental Build of configuration Debug for project lab1 ****
 make all 
 make: Цель «all» не требует выполнения команд.
-23:39:42 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-make: Цель «all» не требует выполнения команд.
-23:40:28 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-23:42:38 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-23:44:48 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-23:45:08 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-21:06:41 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
-21:10:14 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-../lab1.cpp(66): error: this range-based "for" statement requires a suitable "begin" function and none was found
-  	for (int e : vtest)
-  	             ^
-
-../lab1.cpp(66): error: this range-based "for" statement requires a suitable "end" function and none was found
-  	for (int e : vtest)
-  	             ^
-
-../lab1.cpp(67): error: expression must have class type
-  		vtest.push_back(rand() % 20000 + 1));
-  		^
-
-../lab1.cpp(67): error: expected a ";"
-  		vtest.push_back(rand() % 20000 + 1));
-  		                                   ^
-
-../lab1.cpp(72): error: this range-based "for" statement requires a suitable "begin" function and none was found
-  	cilk_for (int e : ctest)
-  	                  ^
-
-../lab1.cpp(72): error: this range-based "for" statement requires a suitable "end" function and none was found
-  	cilk_for (int e : ctest)
-  	                  ^
-
-../lab1.cpp(72): error: a _Cilk_for statement is not currently allowed as a range-based "for" statement
-  	cilk_for (int e : ctest)
-  	^
-
-../lab1.cpp(73): error: expression must have class type
-  		ctest.push_back(rand() % 20000 + 1));
-  		^
-
-../lab1.cpp(73): error: expected a ";"
-  		ctest.push_back(rand() % 20000 + 1));
-  		                                   ^
-
-compilation aborted for ../lab1.cpp (code 2)
-make: *** [subdir.mk:20: lab1.o] Ошибка 2
-"make all" terminated with exit code 2. Build might be incomplete.
-21:10:57 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-../lab1.cpp(66): error: this range-based "for" statement requires a suitable "begin" function and none was found
-  	for (int &e : vtest)
-  	              ^
-
-../lab1.cpp(66): error: this range-based "for" statement requires a suitable "end" function and none was found
-  	for (int &e : vtest)
-  	              ^
-
-../lab1.cpp(67): error: expression must have class type
-  		vtest.push_back(rand() % 20000 + 1));
-  		^
-
-../lab1.cpp(67): error: expected a ";"
-  		vtest.push_back(rand() % 20000 + 1));
-  		                                   ^
-
-../lab1.cpp(72): error: this range-based "for" statement requires a suitable "begin" function and none was found
-  	cilk_for (int &e : ctest)
-  	                   ^
-
-../lab1.cpp(72): error: this range-based "for" statement requires a suitable "end" function and none was found
-  	cilk_for (int &e : ctest)
-  	                   ^
-
-../lab1.cpp(72): error: a _Cilk_for statement is not currently allowed as a range-based "for" statement
-  	cilk_for (int &e : ctest)
-  	^
-
-../lab1.cpp(73): error: expression must have class type
-  		ctest.push_back(rand() % 20000 + 1));
-  		^
-
-../lab1.cpp(73): error: expected a ";"
-  		ctest.push_back(rand() % 20000 + 1));
-  		                                   ^
-
-compilation aborted for ../lab1.cpp (code 2)
-make: *** [subdir.mk:20: lab1.o] Ошибка 2
-"make all" terminated with exit code 2. Build might be incomplete.
-21:11:18 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-../lab1.cpp(66): error: this range-based "for" statement requires a suitable "begin" function and none was found
-  	for (int &e : vtest)
-  	              ^
-
-../lab1.cpp(66): error: this range-based "for" statement requires a suitable "end" function and none was found
-  	for (int &e : vtest)
-  	              ^
-
-../lab1.cpp(67): error: expression must have class type
-  		vtest.push_back(rand() % 20000 + 1);
-  		^
-
-../lab1.cpp(72): error: this range-based "for" statement requires a suitable "begin" function and none was found
-  	cilk_for (int &e : ctest)
-  	                   ^
-
-../lab1.cpp(72): error: this range-based "for" statement requires a suitable "end" function and none was found
-  	cilk_for (int &e : ctest)
-  	                   ^
-
-../lab1.cpp(72): error: a _Cilk_for statement is not currently allowed as a range-based "for" statement
-  	cilk_for (int &e : ctest)
-  	^
-
-../lab1.cpp(73): error: expression must have class type
-  		ctest.push_back(rand() % 20000 + 1);
-  		^
-
-compilation aborted for ../lab1.cpp (code 2)
-make: *** [subdir.mk:20: lab1.o] Ошибка 2
-"make all" terminated with exit code 2. Build might be incomplete.
-21:12:25 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-../lab1.cpp(67): error: expression must have class type
-  		vtest.push_back(rand() % 20000 + 1);
-  		^
-
-../lab1.cpp(73): error: expression must have class type
-  		ctest.push_back(rand() % 20000 + 1);
-  		^
-
-compilation aborted for ../lab1.cpp (code 2)
-make: *** [subdir.mk:20: lab1.o] Ошибка 2
-"make all" terminated with exit code 2. Build might be incomplete.
-21:15:19 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-../lab1.cpp(73): error: class "cilk::reducer<cilk::op_vector<int, std::allocator<int>>>" has no member "push_back"
-  		ctest.push_back(rand() % 20000 + 1);
-  		      ^
-
-compilation aborted for ../lab1.cpp (code 2)
-make: *** [subdir.mk:20: lab1.o] Ошибка 2
-"make all" terminated with exit code 2. Build might be incomplete.
-21:15:56 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building file: ../lab1.cpp
-Invoking: Intel C++ Compiler
-icpc -g -O0 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
-  	^
-
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
- 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-Finished building target: lab1
- 
