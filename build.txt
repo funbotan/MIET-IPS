@@ -1,0 +1,1 @@
+~/intel/bin/icpc -m64 -O2 <source>
