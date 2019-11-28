@@ -1,0 +1,5 @@
+
+8486:perf-sync:ready:TSC=11153378930246
+[ perf record: Woken up 7 times to write data ]
+[ perf record: Packed 0.000 MB of 0.001 MB, ratio is 2.288 ]
+[ perf record: Captured and wrote 0.036 MB /home/funbotan/eclipse-workspace/lab2/lab2/r005hs/data.0/8476.perf ]

@@ -1,0 +1,5 @@
+
+8473:perf-sync:ready:TSC=11152656094162
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Packed 0.001 MB of 0.006 MB, ratio is 5.484 ]
+[ perf record: Captured and wrote 0.020 MB /home/funbotan/eclipse-workspace/lab2/lab2/r005hs/data.0/temp.dryrun.perf ]

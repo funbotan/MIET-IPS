@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log version="1.0" tool="runtool">
+
+<msg id="1" tool="runtool">
+  <type>log-start</type>
+  <arg>2019/11/08 20:20:41</arg>
+</msg>
+<msg id="2" tool="runtool">
+  <type>collector-starts</type>
+</msg>
+<msg id="3" tool="runtool">
+  <type>marker-file</type>
+  <arg>/home/funbotan/eclipse-workspace/lab2/lab2/r008ti3/r008ti3.inspxe</arg>
+</msg>
+<msg id="4" tool="tc">
+  <type>START</type>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:41 2019</timestamp>
+</msg>
+<msg id="5" tool="tc">
+  <type>EXEC_OF_INTEREST</type>
+  <arg>/home/funbotan/eclipse-workspace/lab2/output</arg>
+  <arg>12920</arg>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:41 2019</timestamp>
+</msg>
+<msg id="6" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/home/funbotan/eclipse-workspace/lab2/output</arg>
+  <arg>0x400000</arg>
+  <arg>0x40876f</arg>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:41 2019</timestamp>
+</msg>
+<msg id="7" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7fb9e6d43000</arg>
+  <arg>0x7fb9e6d7118f</arg>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:41 2019</timestamp>
+</msg>
+<msg id="8" tool="tc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffecabaa000</arg>
+  <arg>0x7ffecabaaa71</arg>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:41 2019</timestamp>
+</msg>
+<msg id="9" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/home/funbotan/eclipse-workspace/lab2/output</arg>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:42 2019</timestamp>
+</msg>
+<msg id="10" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:42 2019</timestamp>
+</msg>
+<msg id="11" tool="tc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:42 2019</timestamp>
+</msg>
+<msg id="12" tool="tc">
+  <type>PROCESS_TERMINATE</type>
+  <arg>/home/funbotan/eclipse-workspace/lab2/output</arg>
+  <arg>12920</arg>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:42 2019</timestamp>
+</msg>
+<msg id="13" tool="tc">
+  <type>SINGLE_THREAD</type>
+  <severity>WARNING</severity>
+  <timestamp>Fri Nov  8 20:20:42 2019</timestamp>
+</msg>
+<msg id="14" tool="tc">
+  <type>ANALYSIS_COMPLETE</type>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:42 2019</timestamp>
+</msg>
+<msg id="15" tool="tc">
+  <type>STOP</type>
+  <severity>INFO</severity>
+  <timestamp>Fri Nov  8 20:20:42 2019</timestamp>
+</msg>
+<msg id="16" tool="runtool">
+  <type>app-exit-code</type>
+  <arg>127</arg>
+</msg>
+<msg id="17" tool="runtool">
+  <type>marker-file</type>
+  <arg>/home/funbotan/eclipse-workspace/lab2/lab2/r008ti3/r008ti3.inspxe</arg>
+</msg>
+<msg id="18" tool="runtool">
+  <type>collector-done</type>
+</msg>
+<msg id="19" tool="runtool">
+  <type>log-end</type>
+  <arg>2019/11/08 20:20:45</arg>
+</msg>
+
+</log>
+

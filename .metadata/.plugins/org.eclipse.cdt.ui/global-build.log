@@ -1,149 +1,478 @@
-21:35:30 **** Incremental Build of configuration Release for project lab1 ****
+21:40:04 **** Incremental Build of configuration Release for project lab3 ****
 make all 
-Building file: ../lab1.cpp
+Building file: ../lab3.cpp
 Invoking: Intel C++ Compiler
-icpc -O2 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(31): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for(i = 1; i <= n; i++)
   	^
 
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
+Finished building: ../lab3.cpp
  
-Building target: lab1
+Building target: lab3
 Invoking: Intel C++ Linker
-icpc  -o "lab1"  ./lab1.o   
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.so при поиске -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.a при поиске -lstdc++
-ld: невозможно найти -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.so при поиске -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.a при поиске -lstdc++
-ld: невозможно найти -lstdc++
-make: *** [makefile:55: lab1] Ошибка 1
-"make all" terminated with exit code 2. Build might be incomplete.
-21:40:13 **** Incremental Build of configuration Release for project lab1 ****
-make all 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc  -o "lab1"  ./lab1.o   
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.so при поиске -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.a при поиске -lstdc++
-ld: невозможно найти -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.so при поиске -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.a при поиске -lstdc++
-ld: невозможно найти -lstdc++
-make: *** [makefile:55: lab1] Ошибка 1
-"make all" terminated with exit code 2. Build might be incomplete.
-21:46:38 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.so при поиске -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.a при поиске -lstdc++
-ld: невозможно найти -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.so при поиске -lstdc++
-ld: пропускается несовместимый /usr/lib/gcc/x86_64-linux-gnu/9//libstdc++.a при поиске -lstdc++
-ld: невозможно найти -lstdc++
-make: *** [makefile:55: lab1] Ошибка 1
-"make all" terminated with exit code 2. Build might be incomplete.
-21:59:52 **** Incremental Build of configuration Debug for project lab1 ****
-make all 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-ld: архитектура i386 входного файла «./lab1.o» несовместима с выходным i386:x86-64
-ld: ./lab1.o: в функции «sortTest(long)»:
-/home/funbotan/eclipse-workspace/lab1/Debug/../lab1.cpp:83: неопределённая ссылка на «operator new[](unsigned int)»
-ld: ./lab1.o: в функции «std::chrono::duration<long long, std::ratio<1ll, 1000000ll> > std::chrono::__duration_cast_impl<std::chrono::duration<long long, std::ratio<1ll, 1000000ll> >, std::ratio<1ll, 1000ll>, long long, true, false>::__cast<long long, std::ratio<1ll, 1000000000ll> >(std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > const&)»:
-/usr/include/c++/9/chrono:153: неопределённая ссылка на «__divdi3»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<int>::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<std::_List_node<std::vector<int, std::allocator<int> > > >::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<unsigned int>::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «cilk::monoid_base<std::pair<long, int>, cilk::cilk_lib_1_1::op_min_index_view<long, int, std::less<int> > >::allocate(unsigned int) const»:
-/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «cilk::monoid_base<std::pair<long, int>, cilk::cilk_lib_1_1::op_max_index_view<long, int, std::less<int> > >::allocate(unsigned int) const»:
-/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o:/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: далее есть ещё неопределённые ссылки на «operator new(unsigned int)»
-make: *** [makefile:55: lab1] Ошибка 1
-"make all" terminated with exit code 2. Build might be incomplete.
-22:00:11 **** Clean-only build of configuration Release for project lab1 ****
-make clean 
-rm -rf  ./lab1.o  ./lab1.d  lab1
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
  
-22:00:14 **** Build of configuration Debug for project lab1 ****
+21:40:07 **** Incremental Build of configuration Release for project lab3 ****
 make all 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-ld: архитектура i386 входного файла «./lab1.o» несовместима с выходным i386:x86-64
-ld: ./lab1.o: в функции «sortTest(long)»:
-/home/funbotan/eclipse-workspace/lab1/Debug/../lab1.cpp:83: неопределённая ссылка на «operator new[](unsigned int)»
-ld: ./lab1.o: в функции «std::chrono::duration<long long, std::ratio<1ll, 1000000ll> > std::chrono::__duration_cast_impl<std::chrono::duration<long long, std::ratio<1ll, 1000000ll> >, std::ratio<1ll, 1000ll>, long long, true, false>::__cast<long long, std::ratio<1ll, 1000000000ll> >(std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > const&)»:
-/usr/include/c++/9/chrono:153: неопределённая ссылка на «__divdi3»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<int>::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<std::_List_node<std::vector<int, std::allocator<int> > > >::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<unsigned int>::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «cilk::monoid_base<std::pair<long, int>, cilk::cilk_lib_1_1::op_min_index_view<long, int, std::less<int> > >::allocate(unsigned int) const»:
-/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «cilk::monoid_base<std::pair<long, int>, cilk::cilk_lib_1_1::op_max_index_view<long, int, std::less<int> > >::allocate(unsigned int) const»:
-/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o:/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: далее есть ещё неопределённые ссылки на «operator new(unsigned int)»
-make: *** [makefile:55: lab1] Ошибка 1
-"make all" terminated with exit code 2. Build might be incomplete.
-22:16:48 **** Incremental Build of configuration Debug for project lab1 ****
+make: Цель «all» не требует выполнения команд.
+21:44:57 **** Incremental Build of configuration Release for project lab3 ****
 make all 
-Building target: lab1
-Invoking: Intel C++ Linker
-icpc -O0 -o "lab1"  ./lab1.o   
-ld: архитектура i386 входного файла «./lab1.o» несовместима с выходным i386:x86-64
-ld: ./lab1.o: в функции «sortTest(long)»:
-/home/funbotan/eclipse-workspace/lab1/Debug/../lab1.cpp:83: неопределённая ссылка на «operator new[](unsigned int)»
-ld: ./lab1.o: в функции «std::chrono::duration<long long, std::ratio<1ll, 1000000ll> > std::chrono::__duration_cast_impl<std::chrono::duration<long long, std::ratio<1ll, 1000000ll> >, std::ratio<1ll, 1000ll>, long long, true, false>::__cast<long long, std::ratio<1ll, 1000000000ll> >(std::chrono::duration<long long, std::ratio<1ll, 1000000000ll> > const&)»:
-/usr/include/c++/9/chrono:153: неопределённая ссылка на «__divdi3»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<int>::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<std::_List_node<std::vector<int, std::allocator<int> > > >::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «__gnu_cxx::new_allocator<unsigned int>::allocate(unsigned int, void const*)»:
-/usr/include/c++/9/ext/new_allocator.h:114: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «cilk::monoid_base<std::pair<long, int>, cilk::cilk_lib_1_1::op_min_index_view<long, int, std::less<int> > >::allocate(unsigned int) const»:
-/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o: в функции «cilk::monoid_base<std::pair<long, int>, cilk::cilk_lib_1_1::op_max_index_view<long, int, std::less<int> > >::allocate(unsigned int) const»:
-/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: неопределённая ссылка на «operator new(unsigned int)»
-ld: ./lab1.o:/home/funbotan/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/cilk/reducer.h:201: далее есть ещё неопределённые ссылки на «operator new(unsigned int)»
-make: *** [makefile:55: lab1] Ошибка 1
-"make all" terminated with exit code 2. Build might be incomplete.
-22:19:27 **** Clean-only build of configuration Release for project lab1 ****
-make clean 
-rm -rf  ./lab1.o  ./lab1.d  lab1
- 
-22:19:27 **** Incremental Build of configuration Release for project lab1 ****
-make all 
-Building file: ../lab1.cpp
+Building file: ../lab3.cpp
 Invoking: Intel C++ Compiler
-icpc -O2 -MMD -MP -MF"lab1.d" -MT"lab1.d" -c -o "lab1.o" "../lab1.cpp"
-../lab1.cpp(26): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  	cilk_for(long i = 0; i < size; ++i)
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(42): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
   	^
 
-../lab1.cpp(55): warning #3946: "_Cilk_spawn" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
-  		cilk_spawn ParallelSort(begin, middle);
-  		^
-
-Finished building: ../lab1.cpp
+Finished building: ../lab3.cpp
  
-Building target: lab1
+Building target: lab3
 Invoking: Intel C++ Linker
-icpc  -o "lab1"  ./lab1.o   
-Finished building target: lab1
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
  
+21:44:59 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+21:45:08 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(42): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:10:34 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:10:54 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:11:03 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:11:22 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:11:30 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:11:37 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:11:43 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:12:17 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:13:13 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:13:26 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:13:34 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:13:41 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:16:25 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(45): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++) {
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:19:23 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(45): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++) {
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:21:27 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(45): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++) {
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:23:07 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(45): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++) {
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:23:35 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:23:49 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+22:24:30 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+22:33:54 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+22:41:33 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+22:42:59 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:33:30 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+23:41:20 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+23:41:34 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:42:48 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:43:14 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:44:02 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:47:29 **** Clean-only build of configuration Release for project lab3 ****
+make clean 
+rm -rf  ./lab3.o  ./lab3.d  lab3
+ 
+23:47:31 **** Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+23:47:39 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:48:12 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O2 -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+23:48:34 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:53:55 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -parallel -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+23:54:01 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
+23:55:33 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+Building file: ../lab3.cpp
+Invoking: Intel C++ Compiler
+icpc -g -O0 -parallel -MMD -MP -MF"lab3.d" -MT"lab3.d" -c -o "lab3.o" "../lab3.cpp"
+../lab3.cpp(43): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+  	cilk_for (int i = 0; i < n; i++)
+  	^
+
+Finished building: ../lab3.cpp
+ 
+Building target: lab3
+Invoking: Intel C++ Linker
+icpc  -o "lab3"  ./lab3.o   
+Finished building target: lab3
+ 
+00:07:15 **** Incremental Build of configuration Release for project lab3 ****
+make all 
+make: Цель «all» не требует выполнения команд.
