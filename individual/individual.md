@@ -1,4 +1,4 @@
-![Task](https://raw.githubusercontent.com/funbotan/MIET-IPS/master/individual/task.svg)
+![Task](https://raw.githubusercontent.com/funbotan/MIET-IPS/master/individual/task.png)
 
 Точное значение интеграла равно 2+π, т.е. 5.14159...
 
