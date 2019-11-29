@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <ctime>
+#include <cmath>
 #include <cilk/cilk.h>
 #include <cilk/reducer_opadd.h>
 #include <chrono>
+#include <algorithm>
 
 using namespace std::chrono;
 template <typename Duration = std::chrono::microseconds, typename F, typename ... Args>
@@ -83,18 +85,26 @@ int ParallelGaussMethod(double** matrix, const int rows, double* result)
 	return (int)std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count();
 }
 
+bool equals(double* a, double* b, size_t len)
+{
+	for (int i = 0; i < len; ++i) {
+		if (std::fabs(a[i]-b[i]) > fabs(a[i] * .0001))
+			return false;
+	}
+	return true;
+}
+
 
 int main()
 {
-	srand( (unsigned) time( 0 ) );
-	int i;
+	srand((unsigned)time(0));
 
 	// êîë-âî ñòðîê â ìàòðèöå, ïðèâîäèìîé â êà÷åñòâå ïðèìåðà
 	//const int test_matrix_lines = 4;
 	const int test_matrix_lines = MATRIX_SIZE;
 	double **test_matrix = new double*[test_matrix_lines];
 	// öèêë ïî ñòðîêàì
-	for ( i = 0; i < test_matrix_lines; ++i )
+	for (int i = 0; i < test_matrix_lines; ++i)
 	{
 		// (test_matrix_lines + 1)- êîëè÷åñòâî ñòîëáöîâ â òåñòîâîé ìàòðèöå,
 		// ïîñëåäíèé ñòîëáåö ìàòðèöû îòâåäåí ïîä ïðàâûå ÷àñòè óðàâíåíèé, âõîäÿùèõ â ÑËÀÓ
@@ -102,7 +112,8 @@ int main()
 	}
 
 	// ìàññèâ ðåøåíèé ÑËÀÓ
-	double *result = new double[test_matrix_lines];
+	double *sresult = new double[test_matrix_lines];
+	double *presult = new double[test_matrix_lines];
 
 	// èíèöèàëèçàöèÿ òåñòîâîé ìàòðèöû
 	/*
@@ -113,13 +124,14 @@ int main()
 	*/
 
 	InitMatrix(test_matrix);
-	int ts = SerialGaussMethod(test_matrix, test_matrix_lines, result);
-	int tp = ParallelGaussMethod(test_matrix, test_matrix_lines, result);
+	int ts = SerialGaussMethod(test_matrix, test_matrix_lines, sresult);
+	int tp = ParallelGaussMethod(test_matrix, test_matrix_lines, presult);
 	printf("Serial Gauss duration: %d microseconds\n", ts);
 	printf("Parallel Gauss duration: %d microseconds\n", tp);
+	printf("Do results match? %s\n", equals(sresult, presult, test_matrix_lines) ? "✓" : "✘");
 	printf("Boost ratio: %f\n", (float)ts / tp);
 
-	for ( i = 0; i < test_matrix_lines; ++i )
+	for (int i = 0; i < test_matrix_lines; ++i)
 		delete[]test_matrix[i];
 
 	/*
@@ -127,6 +139,6 @@ int main()
 	for ( i = 0; i < test_matrix_lines; ++i )
 		printf( "x(%d) = %lf\n", i, result[i] );
 	*/
-	delete[] result;
+	delete[] sresult, presult;
 	return 0;
 }

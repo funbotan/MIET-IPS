@@ -128,10 +128,24 @@ x(2) = 2.000000
 x(3) = -0.000000
 ```
 
+Сравнение решений последовательного и параллельного методов будем проводить при помощи следующей функции:
+
+```
+bool equals(double* a, double* b, size_t len)
+{
+	for (int i = 0; i < len; ++i) {
+		if (std::fabs(a[i]-b[i]) > fabs(a[i] * .0001))
+			return false;
+	}
+	return true;
+}
+```
+
 Сравнение времени выполнения последовательного и параллельного методов:
 
 ```
-Serial Gauss duration: 766317 microseconds
-Parallel Gauss duration: 616903 microseconds
-Boost ratio: 1.242200
+Serial Gauss duration: 936415 microseconds
+Parallel Gauss duration: 746388 microseconds
+Do results match? ✓
+Boost ratio: 1.254596
 ```
